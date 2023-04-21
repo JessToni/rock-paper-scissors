@@ -4,11 +4,11 @@ getComputerChoice();
 function getComputerChoice() {
     getRandomNumber();
     if (num === 0) {
-        return "Rock"
+        return console.log("Rock");
     } else if (num === 1) {
-        return "Paper"
+        return console.log("Paper");
     } else {
-        return "Scissors"
+        return console.log("Scissors");
     }
 }
 
