@@ -1,4 +1,5 @@
 let num = 0;
+const playerChoice = "rock";
 getComputerChoice();
 
 function getComputerChoice() {
