@@ -1,7 +1,7 @@
 let num = 0;
 const playerChoice = "rock";
 let computerChoice;
-playRound();
+playRound(playerChoice,computerChoice);
 
 function getComputerChoice() {
     getRandomNumber();
@@ -19,13 +19,15 @@ function getRandomNumber(min = 1, max = 3) {
     num = rand;
 }
 
-function playRound(playerSelection, computerSelection) {
+function playRound(playerSelection,computerSelection) {
     computerChoice = getComputerChoice();
-    playerSelection = playerChoice.toLowerCase();
-    computerSelection = computerChoice.toLowerCase();
+    playerSelection = playerSelection.toLowerCase();
+    computerSelection = computerSelection.toLowerCase();
 
     console.log(playerSelection);
     console.log(computerSelection);
+    typeof(playerSelection);
+    typeof(computerSelection);
 
     switch (playerSelection,computerSelection) {
         case (playerSelection === computerSelection):
