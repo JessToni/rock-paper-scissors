@@ -40,6 +40,4 @@ function playRound(playerSelection, computerSelection) {
         case (playerSelection === "rock" && computerSelection === "paper"):
             return conslole.log("Computer wins!")
     }
-
-    }
 }
