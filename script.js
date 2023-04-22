@@ -1,7 +1,7 @@
 let num = 0;
 const playerChoice = "rock";
 let computerChoice = getComputerChoice();
-console.log(computerChoice);
+playRound();
 
 function getComputerChoice() {
     getRandomNumber();
@@ -20,5 +20,8 @@ function getRandomNumber(min = 1, max = 3) {
 }
 
 function playRound(playerSelection, computerSelection) {
-
+    computerSelection = computerChoice.toLowerCase();
+    console.log(computerSelection);
+    playerSelection = playerChoice.toLowerCase();
+    console.log(playerSelection);
 }
