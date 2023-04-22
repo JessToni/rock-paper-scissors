@@ -25,8 +25,8 @@ function playRound(playerSelection,computerSelection) {
 
     console.log(playerSelection);
     console.log(computerSelection);
-    typeof(playerSelection);
-    typeof(computerSelection);
+    console.log(typeof(playerSelection))
+    console.log(typeof(computerSelection))
 
     switch (playerSelection,computerSelection) {
         case (playerSelection === computerSelection):
