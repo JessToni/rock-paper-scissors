@@ -28,7 +28,7 @@ function playRound(playerSelection,computerSelection) {
     console.log(typeof(playerSelection))
     console.log(typeof(computerSelection))
 
-    switch (playerSelection,computerSelection) {
+    switch (true) {
         case (playerSelection === computerSelection):
             return console.log("It's a draw");
         case (playerSelection === "scissors" && computerSelection === "paper"):
