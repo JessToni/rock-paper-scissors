@@ -24,6 +24,9 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = playerChoice.toLowerCase();
     computerSelection = computerChoice.toLowerCase();
 
+    console.log(playerSelection);
+    console.log(computerSelection);
+
     switch (playerSelection,computerSelection) {
         case (playerSelection === computerSelection):
             return console.log("It's a draw");
