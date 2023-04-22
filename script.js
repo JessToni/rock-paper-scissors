@@ -26,18 +26,18 @@ function playRound(playerSelection, computerSelection) {
 
     switch (playerSelection,computerSelection) {
         case (playerSelection === computerSelection):
-            return conslole.log("It's a draw")
+            return conslole.log("It's a draw");
         case (playerSelection === "scissors" && computerSelection === "paper"):
-            return conslole.log("Player wins!")
+            return conslole.log("Player wins!");
         case (playerSelection === "scissors" && computerSelection === "rock"):
-            return conslole.log("Computer wins!")
+            return conslole.log("Computer wins!");
         case (playerSelection === "paper" && computerSelection === "rock"):
-            return conslole.log("Player wins!")
+            return conslole.log("Player wins!");
         case (playerSelection === "paper" && computerSelection === "scissors"):
-            return conslole.log("Computer wins!")
+            return conslole.log("Computer wins!");
         case (playerSelection === "rock" && computerSelection === "scissors"):
-            return conslole.log("Player wins!")
+            return conslole.log("Player wins!");
         case (playerSelection === "rock" && computerSelection === "paper"):
-            return conslole.log("Computer wins!")
+            return conslole.log("Computer wins!");
     }
 }
