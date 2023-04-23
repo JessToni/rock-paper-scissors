@@ -1,7 +1,7 @@
 let num = 0;
 const playerChoice = "rock";
 let computerChoice = getComputerChoice();
-console.log(playRound(playerChoice,computerChoice));
+game();
 
 function getComputerChoice() {
     getRandomNumber();
@@ -38,5 +38,11 @@ function playRound(playerSelection,computerSelection) {
             return "Player wins!";
         case (playerSelection === "rock" && computerSelection === "paper"):
             return "Computer wins!";
+    }
+}
+
+function game() {
+    for (let i = 0; i < 5; i++) {
+        console.log(playRound(playerChoice,computerChoice));
     }
 }
