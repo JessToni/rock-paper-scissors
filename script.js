@@ -1,7 +1,7 @@
 let num = 0;
 const playerChoice = "rock";
 let computerChoice = getComputerChoice();
-playRound(playerChoice,computerChoice);
+console.log(playRound(playerChoice,computerChoice));
 
 function getComputerChoice() {
     getRandomNumber();
@@ -25,18 +25,18 @@ function playRound(playerSelection,computerSelection) {
 
     switch (true) {
         case (playerSelection === computerSelection):
-            return console.log("It's a draw");
+            return "It's a draw";
         case (playerSelection === "scissors" && computerSelection === "paper"):
-            return console.log("Player wins!");
+            return "Player wins!";
         case (playerSelection === "scissors" && computerSelection === "rock"):
-            return console.log("Computer wins!");
+            return "Computer wins!";
         case (playerSelection === "paper" && computerSelection === "rock"):
-            return console.log("Player wins!");
+            return "Player wins!";
         case (playerSelection === "paper" && computerSelection === "scissors"):
-            return console.log("Computer wins!");
+            return "Computer wins!";
         case (playerSelection === "rock" && computerSelection === "scissors"):
-            return console.log("Player wins!");
+            return "Player wins!";
         case (playerSelection === "rock" && computerSelection === "paper"):
-            return console.log("Computer wins!");
+            return "Computer wins!";
     }
 }
