@@ -43,6 +43,8 @@ function playRound(playerSelection,computerSelection) {
 
 function game() {
     for (let i = 0; i < 5; i++) {
+        computerChoice = getComputerChoice();
         console.log(playRound(playerChoice,computerChoice));
+        console.log(computerChoice);
     }
 }
