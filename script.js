@@ -1,5 +1,5 @@
 let num = 0;
-const playerChoice = "rock";
+const playerChoice = prompt("Rock, Paper, Scissors?");
 let computerChoice = getComputerChoice();
 game();
 
