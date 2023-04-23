@@ -23,11 +23,6 @@ function playRound(playerSelection,computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
 
-    console.log(playerSelection);
-    console.log(computerSelection);
-    console.log(typeof(playerSelection))
-    console.log(typeof(computerSelection))
-
     switch (true) {
         case (playerSelection === computerSelection):
             return console.log("It's a draw");
