@@ -1,10 +1,16 @@
 let num = 0;
-const playerChoice = document.querySelector('#btn');
-playerChoice.addEventListener('click', () => {
-    console.log(playerChoice);
+let playerChoice = document.getElementById('player-choices');
+
+playerChoice.addEventListener('click', (event) => {
+    const isButton = event.target.nodeName ==='BUTTON'
+    if (!isButton) {
+        return;
+    }
+    console.dir(event.target.id);
+    game();
 })
 let computerChoice = getComputerChoice();
-game();
+
 
 function getComputerChoice() {
     getRandomNumber();
