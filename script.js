@@ -1,5 +1,8 @@
 let num = 0;
-const playerChoice = prompt("Rock, Paper, Scissors?");
+const playerChoice = document.querySelector('#btn');
+playerChoice.addEventListener('click', () => {
+    console.log(playerChoice);
+})
 let computerChoice = getComputerChoice();
 game();
 
@@ -42,10 +45,7 @@ function playRound(playerSelection,computerSelection) {
 }
 
 function game() {
-    for (let i = 0; i < 5; i++) {
-        computerChoice = getComputerChoice();
-        console.log(computerChoice);
-        console.log(playRound(playerChoice,computerChoice));
-
-    }
+    computerChoice = getComputerChoice();
+    console.log(computerChoice);
+    console.log(playRound(playerChoice,computerChoice));
 }
