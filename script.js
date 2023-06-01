@@ -1,6 +1,6 @@
 let num = 0;
 const playerChoice = document.querySelector('#btn');
-BigInt.addEventListener('click', () => {
+playerChoice.addEventListener('click', () => {
     console.log(playerChoice);
 })
 let computerChoice = getComputerChoice();
