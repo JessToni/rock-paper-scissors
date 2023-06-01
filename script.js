@@ -1,14 +1,17 @@
 let num = 0;
-let playerChoice = document.getElementById('player-choices');
+let choices = document.getElementById('player-choices');
+let playerChoice = "";
 
-playerChoice.addEventListener('click', (event) => {
+choices.addEventListener('click', (event) => {
     const isButton = event.target.nodeName ==='BUTTON'
     if (!isButton) {
         return;
     }
     console.dir(event.target.id);
+    playerChoice = event.target.id;
     game();
 })
+
 let computerChoice = getComputerChoice();
 
 
