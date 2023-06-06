@@ -1,7 +1,6 @@
-//const playerChoice = prompt("Rock, Paper, Scissors?");
-const rockButton = document.querySelector(".rock");
-const paperButton = document.querySelector(".paper");
-const scissorsButton = document.querySelector(".scissors");
+const rockButton = document.querySelector('.rock');
+const paperButton = document.querySelector('.paper');
+const scissorsButton = document.querySelector('scissors');
 
 function getComputerChoice() {
     const arrOfChoices = ['rock', 'paper', 'scissors']
@@ -39,7 +38,7 @@ function playRound(playerSelection,computerSelection) {
 rockButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice();
     const playerSelection = 'rock';
-    playRound(playerSelection, computerSelection)
+    console.log(playRound(playerSelection, computerSelection))
 })
 
 //function game() {
