@@ -1,8 +1,10 @@
 const rockButton = document.querySelector('.rock');
 const paperButton = document.querySelector('.paper');
 const scissorsButton = document.querySelector('.scissors');
-
-const showResults = document.querySelector('.results')
+const showResults = document.querySelector('.results');
+const playerScore = document.querySelector('.player-score');
+const computerScore = document.querySelector('.computer-score')
+const gameWinner = document.querySelector('.game-winner')
 
 function getComputerChoice() {
     const arrOfChoices = ['rock', 'paper', 'scissors']
