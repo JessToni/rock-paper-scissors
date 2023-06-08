@@ -8,7 +8,7 @@ const gameWinner = document.querySelector('.game-winner')
 
 let playerScore = 0;
 let computerScore = 0;
-
+let total = playerScore + computerScore;
 
 function getComputerChoice() {
     const arrOfChoices = ['rock', 'paper', 'scissors']
@@ -51,23 +51,23 @@ function playRound(playerSelection,computerSelection) {
 rockButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice();
     const playerSelection = 'rock';
+    showResults.textContent = playRound(playerSelection, computerSelection);
     showPlayerScore.textContent = "Player Score: " + playerScore;
     showComputerScore.textContent = "Computer Score: " + computerScore;
-    showResults.textContent = playRound(playerSelection, computerSelection);
 })
 
 paperButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice();
     const playerSelection = 'paper';
+    showResults.textContent = playRound(playerSelection, computerSelection);
     showPlayerScore.textContent = "Player Score: " + playerScore;
     showComputerScore.textContent = "Computer Score: " + computerScore;
-    showResults.textContent = playRound(playerSelection, computerSelection);
 })
 
 scissorsButton.addEventListener('click', () => {
     const computerSelection = getComputerChoice();
     const playerSelection = 'scissors';
+    showResults.textContent = playRound(playerSelection, computerSelection);
     showPlayerScore.textContent = "Player Score: " + playerScore;
     showComputerScore.textContent = "Computer Score: " + computerScore;
-    showResults.textContent = playRound(playerSelection, computerSelection);
 })
