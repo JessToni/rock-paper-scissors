@@ -1,51 +1,93 @@
-let num = 0;
-const playerChoice = document.querySelector('#btn');
-playerChoice.addEventListener('click', () => {
-    console.log(playerChoice);
-})
-let computerChoice = getComputerChoice();
-game();
+const rockButton = document.querySelector('.rock');
+const paperButton = document.querySelector('.paper');
+const scissorsButton = document.querySelector('.scissors');
+const showResults = document.querySelector('.results');
+const showPlayerScore = document.querySelector('.player-score');
+const showComputerScore = document.querySelector('.computer-score')
+const gameWinner = document.querySelector('.game-winner')
+
+let playerScore = 0;
+let computerScore = 0;
+let total = playerScore + computerScore;
 
 function getComputerChoice() {
-    getRandomNumber();
-    if (num === 0) {
-        return "Rock"
-    } else if (num === 1) {
-        return "Paper"
-    } else {
-        return "Scissors"
-    }
+    const arrOfChoices = ['rock', 'paper', 'scissors']
+    const randomNumber = getRandomNumber();
+    return arrOfChoices[randomNumber];
 }
 
 function getRandomNumber(min = 1, max = 3) {
     let rand = Math.floor(Math.random() * max);
-    num = rand;
+    return rand;
 }
 
 function playRound(playerSelection,computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     computerSelection = computerSelection.toLowerCase();
 
-    switch (true) {
-        case (playerSelection === computerSelection):
-            return "It's a draw";
-        case (playerSelection === "scissors" && computerSelection === "paper"):
-            return "Player wins!";
-        case (playerSelection === "scissors" && computerSelection === "rock"):
-            return "Computer wins!";
-        case (playerSelection === "paper" && computerSelection === "rock"):
-            return "Player wins!";
-        case (playerSelection === "paper" && computerSelection === "scissors"):
-            return "Computer wins!";
-        case (playerSelection === "rock" && computerSelection === "scissors"):
-            return "Player wins!";
-        case (playerSelection === "rock" && computerSelection === "paper"):
-            return "Computer wins!";
+    if (playerSelection === computerSelection) {
+        return "Nobody wins. It's a draw!"
+    } else if (playerSelection === "scissors" && computerSelection === "paper") {
+        playerScore++;
+        return "Player wins! Scissors cuts paper."
+    } else if (playerSelection === "scissors" && computerSelection === "rock") {
+        computerScore++;
+        return "Computer wins! Rock smashes scissors."
+    } else if (playerSelection === "paper" && computerSelection === "rock") {
+        playerScore++;
+        return "Player wins! Paper trumps rock."
+    } else if (playerSelection === "paper" && computerSelection === "scissors") {
+        computerScore++;
+        return "Computer wins! Scissors cuts paper."
+    } else if (playerSelection === "rock" && computerSelection === "paper") {
+        computerScore++;
+        return "Computer wins! Paper trumps rock."
+    } else if (playerSelection === "rock" && computerSelection === "scissors") {
+        playerScore++;
+        return "Player wins! Rock smashes scissors."
     }
 }
 
-function game() {
-    computerChoice = getComputerChoice();
-    console.log(computerChoice);
-    console.log(playRound(playerChoice,computerChoice));
+function keepScore() {
+    if (playerScore === 5) {
+        playerScore = 0;
+        computerScore = 0;
+        gameWinner.textContent = "Player wins the game!"
+        showResults.textContent = "Click a button to start the game."
+    } else if (computerScore === 5) {
+        playerScore = 0;
+        computerScore = 0;
+        gameWinner.textContent = "Computer wins the game!"
+        showResults.textContent = "Click a button to start the game."
+    }
 }
+
+rockButton.addEventListener('click', () => {
+    gameWinner.textContent = ""
+    const computerSelection = getComputerChoice();
+    const playerSelection = 'rock';
+    showResults.textContent = playRound(playerSelection, computerSelection);
+    showPlayerScore.textContent = "Player Score: " + playerScore;
+    showComputerScore.textContent = "Computer Score: " + computerScore;
+    keepScore();
+})
+
+paperButton.addEventListener('click', () => {
+    gameWinner.textContent = ""
+    const computerSelection = getComputerChoice();
+    const playerSelection = 'paper';
+    showResults.textContent = playRound(playerSelection, computerSelection);
+    showPlayerScore.textContent = "Player Score: " + playerScore;
+    showComputerScore.textContent = "Computer Score: " + computerScore;
+    keepScore();
+})
+
+scissorsButton.addEventListener('click', () => {
+    gameWinner.textContent = ""
+    const computerSelection = getComputerChoice();
+    const playerSelection = 'scissors';
+    showResults.textContent = playRound(playerSelection, computerSelection);
+    showPlayerScore.textContent = "Player Score: " + playerScore;
+    showComputerScore.textContent = "Computer Score: " + computerScore;
+    keepScore();
+})
