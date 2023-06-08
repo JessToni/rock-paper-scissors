@@ -29,22 +29,22 @@ function playRound(playerSelection,computerSelection) {
         return "Nobody wins. It's a draw!"
     } else if (playerSelection === "scissors" && computerSelection === "paper") {
         playerScore++;
-        return "Scissors cuts paper. Player wins!"
+        return "Player wins! Scissors cuts paper."
     } else if (playerSelection === "scissors" && computerSelection === "rock") {
         computerScore++;
-        return "Rock smashes scissors. Computer wins!"
+        return "Computer wins! Rock smashes scissors."
     } else if (playerSelection === "paper" && computerSelection === "rock") {
         playerScore++;
-        return "Paper trumps rock. Player wins!"
+        return "Player wins! Paper trumps rock."
     } else if (playerSelection === "paper" && computerSelection === "scissors") {
         computerScore++;
-        return "Scissors cuts paper. Computer wins!"
+        return "Computer wins! Scissors cuts paper."
     } else if (playerSelection === "rock" && computerSelection === "paper") {
         computerScore++;
-        return "Paper trumps rock. Computer wins!"
+        return "Computer wins! Paper trumps rock."
     } else if (playerSelection === "rock" && computerSelection === "scissors") {
         playerScore++;
-        return "Rock smashes scissors. Player wins!"
+        return "Player wins! Rock smashes scissors."
     }
 }
 
