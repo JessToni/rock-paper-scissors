@@ -48,26 +48,46 @@ function playRound(playerSelection,computerSelection) {
     }
 }
 
+function keepScore() {
+    if (playerScore === 5) {
+        playerScore = 0;
+        computerScore = 0;
+        gameWinner.textContent = "Player wins the game!"
+        showResults.textContent = "Click a button to start the game."
+    } else if (computerScore === 5) {
+        playerScore = 0;
+        computerScore = 0;
+        gameWinner.textContent = "Computer wins the game!"
+        showResults.textContent = "Click a button to start the game."
+    }
+}
+
 rockButton.addEventListener('click', () => {
+    gameWinner.textContent = ""
     const computerSelection = getComputerChoice();
     const playerSelection = 'rock';
     showResults.textContent = playRound(playerSelection, computerSelection);
     showPlayerScore.textContent = "Player Score: " + playerScore;
     showComputerScore.textContent = "Computer Score: " + computerScore;
+    keepScore();
 })
 
 paperButton.addEventListener('click', () => {
+    gameWinner.textContent = ""
     const computerSelection = getComputerChoice();
     const playerSelection = 'paper';
     showResults.textContent = playRound(playerSelection, computerSelection);
     showPlayerScore.textContent = "Player Score: " + playerScore;
     showComputerScore.textContent = "Computer Score: " + computerScore;
+    keepScore();
 })
 
 scissorsButton.addEventListener('click', () => {
+    gameWinner.textContent = ""
     const computerSelection = getComputerChoice();
     const playerSelection = 'scissors';
     showResults.textContent = playRound(playerSelection, computerSelection);
     showPlayerScore.textContent = "Player Score: " + playerScore;
     showComputerScore.textContent = "Computer Score: " + computerScore;
+    keepScore();
 })
