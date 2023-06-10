@@ -11,3 +11,21 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.display {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 200px;
+    padding-top: 50px;
+}
+
+.results {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.game-winner {
+    padding-top: 50px;
+}
